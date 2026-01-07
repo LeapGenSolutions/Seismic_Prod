@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import SalesModal from "./SalesModal";
-import VPMCLogo from "../../assets/VPMCLogo"; //  import your VPMC logo
 
 const Header = () => {
   const [location] = useLocation();
@@ -76,13 +75,6 @@ const Header = () => {
             Contact Sales
           </button>
         </nav>
-
-        {/* --- Right Side: VPMC Logo + Notifications + User --- */}
-        <div className="flex items-center gap-4">
-          {/*  VPMC Logo */}
-          <div className="flex items-center">
-            <VPMCLogo className="h-9 w-auto" />
-          </div>
 
           {/* Bell Icon */}
           <button className="p-2 text-neutral-500 hover:text-neutral-700 hover:bg-neutral-100 rounded-full">
