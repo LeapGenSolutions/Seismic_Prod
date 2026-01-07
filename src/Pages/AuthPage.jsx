@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { navigate } from "wouter/use-browser-location";
 import { loginRequest } from "../authConfig";
 import Logo from "../assets/Logo";
-import VPMCLogo from "../assets/VPMCLogo";
 
 const AuthPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -91,25 +90,12 @@ const AuthPage = () => {
           {isGuestLoading ? "Continuing..." : "Continue as Guest"}
         </button>
 
-        {/* VPMC Branding */}
-        <div
-          className={`mt-6 flex flex-col items-center justify-center w-full transition-opacity duration-700 ease-out ${
-            showBranding ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-          }`}
-        >
-          <VPMCLogo className="h-10 w-auto" />
-          <p className="text-xs text-gray-500 mt-1 text-center">
-            Powered by Virginia Premium Medical Care
-          </p>
-        </div>
-
         {/* Footer */}
         <div className="mt-6 text-center text-xs text-gray-400">
           © 2025 Seismic Connect. All rights reserved.
         </div>
       </div>
 
-      {/* --- Heartbeat Animation --- */}
       <div
         className="absolute left-0 right-0 w-full pointer-events-none"
         style={{ zIndex: 5, bottom: "24px" }}
