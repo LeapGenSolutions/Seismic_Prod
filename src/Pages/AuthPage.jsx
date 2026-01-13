@@ -52,24 +52,29 @@ const AuthPage = () => {
 
       {/* --- Light Overlay Gradient --- */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/80 to-blue-50/90 backdrop-blur-sm"></div>
-       
+
       {/* --- Login Card --- */}
       <div className="relative max-w-md w-full bg-white/95 p-10 rounded-2xl shadow-lg backdrop-blur-md flex flex-col items-center animate-fadeIn z-10">
-        {/* Logo */}
-        <div className="flex justify-center mb-4">
-          <div className="w-32 h-32 flex items-center justify-center">
-            <Logo size="large" />
-          </div>
-        </div>
 
-        {/* Title */}
-        <h2 className="text-3xl font-extrabold text-[#1E3A8A] mb-2 text-center">
-          Seismic Connect
-        </h2>
-        <p className="mb-8 text-[#1E40AF] font-medium text-center">
-            Healthcare Intelligence Platform
+        {showBranding && (
+          <>
+            {/* Logo */}
+            <div className="flex justify-center mb-4">
+              <div className="w-32 h-32 flex items-center justify-center">
+                <Logo size="large" />
+              </div>
+            </div>
+
+            {/* Title */}
+            <h2 className="text-3xl font-extrabold text-[#1E3A8A] mb-2 text-center">
+              Seismic Connect
+            </h2>
+            <p className="mb-8 text-[#1E40AF] font-medium text-center">
+              Healthcare Intelligence Platform
             </p>
-       
+          </>
+        )}
+
         {/* Sign In Button */}
         <button
           onClick={handleLogin}
@@ -149,4 +154,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage
+export default AuthPage;
