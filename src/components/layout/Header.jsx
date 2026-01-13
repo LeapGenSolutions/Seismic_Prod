@@ -66,7 +66,7 @@ const Header = () => {
             </a>
           </Link>
 
-          {/*  Contact Sales beside Contact Us */}
+          {/* Contact Sales */}
           <button
             className="ml-2 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-full font-semibold text-sm shadow focus:outline-none focus:ring-2 focus:ring-blue-300 transition"
             onClick={() => setShowSalesModal(true)}
@@ -76,12 +76,12 @@ const Header = () => {
           </button>
         </nav>
 
-          {/* Bell Icon */}
+        {/* Right section */}
+        <div className="flex items-center gap-4">
           <button className="p-2 text-neutral-500 hover:text-neutral-700 hover:bg-neutral-100 rounded-full">
             <Bell className="w-5 h-5" />
           </button>
 
-          {/* User Avatar + Info */}
           <div className="flex items-center">
             {user?.profileImage ? (
               <img
